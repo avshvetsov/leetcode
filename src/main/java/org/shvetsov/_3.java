@@ -1,6 +1,5 @@
 package org.shvetsov;
 
-import org.shvetsov.classes.ListNode;
 import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
