@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd51b11b-c02a-4d77-bc71-11889395c841" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/classes/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/classes/ListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/shvetsov/_2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/shvetsov/_2Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/shvetsov/_6Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +18,9 @@
       <list>
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="LeetCode Task" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -46,6 +47,7 @@
     "JUnit._2Test.maxProfit.executor": "Debug",
     "JUnit._2Test.name.executor": "Run",
     "JUnit._66Test.plusOne.executor": "Run",
+    "JUnit._6Test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -77,7 +79,7 @@
       <recent name="org.shvetsov" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit._2Test.name">
+  <component name="RunManager" selected="JUnit._6Test">
     <configuration name="_121Test.maxProfit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
@@ -142,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_66Test.plusOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="_6Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -151,20 +153,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._66Test" />
-      <option name="METHOD_NAME" value="plusOne" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._6Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._6Test" />
         <item itemvalue="JUnit._2Test.name" />
         <item itemvalue="JUnit._2Test.maxProfit" />
         <item itemvalue="JUnit._121Test.maxProfit2" />
         <item itemvalue="JUnit._121Test.maxProfit" />
-        <item itemvalue="JUnit._66Test.plusOne" />
       </list>
     </recent_temporary>
   </component>
