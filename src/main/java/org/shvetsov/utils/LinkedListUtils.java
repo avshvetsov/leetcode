@@ -10,7 +10,7 @@ public class LinkedListUtils {
         }
 
         ListNode head = null;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = array.length - 1; i >= 0; i--) {
             head = new ListNode(array[i], head);
         }
         return head;
