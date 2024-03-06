@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd51b11b-c02a-4d77-bc71-11889395c841" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_5.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     "JUnit._2Test.executor": "Run",
     "JUnit._2Test.name.executor": "Run",
     "JUnit._4Test.executor": "Run",
+    "JUnit._5Test.executor": "Run",
     "JUnit._66Test.plusOne.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -85,27 +86,11 @@
       <recent name="org.shvetsov" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit._4Test">
+  <component name="RunManager" selected="JUnit._5Test">
     <configuration name="All in leetcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_2Test.maxProfit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.shvetsov.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._2Test" />
-      <option name="METHOD_NAME" value="maxProfit" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,13 +142,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_5Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.shvetsov.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.shvetsov" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._5Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._5Test" />
         <item itemvalue="JUnit._4Test" />
         <item itemvalue="JUnit._3Test.lengthOfLongestSubstring" />
         <item itemvalue="JUnit.All in leetcode" />
         <item itemvalue="JUnit._2Test.name" />
-        <item itemvalue="JUnit._2Test.maxProfit" />
       </list>
     </recent_temporary>
   </component>
