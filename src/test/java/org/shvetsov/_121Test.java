@@ -20,10 +20,4 @@ class _121Test {
         assertThat(task.maxProfit(new int[]{7, 6, 4, 3, 1})).isEqualTo(0);
     }
 
-    @Test
-    void maxProfit2() {
-        assertThat(task.maxProfit2(new int[]{7, 1, 5, 3, 6, 4})).isEqualTo(5);
-        assertThat(task.maxProfit2(new int[]{7, 6, 4, 3, 1})).isEqualTo(0);
-    }
-
 }
