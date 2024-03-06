@@ -12,7 +12,6 @@ import org.shvetsov.core.Level;
 public class _9 {
 
     public boolean isPalindrome(int x) {
-
-        return false;
+        return String.valueOf(x).equals(new StringBuilder(String.valueOf(x)).reverse().toString());
     }
 }

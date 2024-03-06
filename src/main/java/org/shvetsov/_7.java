@@ -11,8 +11,13 @@ import org.shvetsov.core.Level;
 )
 public class _7 {
 
-    public int reverse(int x) {
-
-        return 0;
+    public int reverse(int data) {
+        String ans = data < 0 ? new StringBuilder(String.valueOf(-data)).append("-").reverse().toString()
+                : new StringBuilder(String.valueOf(data)).reverse().toString();
+        try {
+            return Integer.parseInt(ans);
+        } catch (Exception e) {
+            return 0;
+        }
     }
 }

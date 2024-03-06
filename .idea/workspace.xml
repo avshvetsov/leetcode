@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd51b11b-c02a-4d77-bc71-11889395c841" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_9.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,34 +46,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BestTimeToBuyAndSellStock_121.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HappyNumber_202.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PlusOne_66.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in leetcode.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit._2Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit._2Test.name.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit._4Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit._5Test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit._66Test.plusOne.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/shvetsov/IdeaProjects/SelfDev/leetcode/leetcode/src/main/java/org/shvetsov&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BestTimeToBuyAndSellStock_121.executor": "Run",
+    "Application.HappyNumber_202.executor": "Run",
+    "Application.PlusOne_66.executor": "Run",
+    "JUnit.All in leetcode.executor": "Run",
+    "JUnit._10Test.executor": "Run",
+    "JUnit._2Test.executor": "Run",
+    "JUnit._2Test.name.executor": "Run",
+    "JUnit._4Test.executor": "Run",
+    "JUnit._5Test.executor": "Run",
+    "JUnit._66Test.plusOne.executor": "Run",
+    "JUnit._7Test.executor": "Run",
+    "JUnit._9Test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/shvetsov/IdeaProjects/SelfDev/leetcode/leetcode/src/main/java/org/shvetsov",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.shvetsov.core" />
@@ -86,16 +92,8 @@
       <recent name="org.shvetsov" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit._6Test">
-    <configuration name="All in leetcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_3Test.lengthOfLongestSubstring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit._10Test">
+    <configuration name="_10Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -104,23 +102,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._3Test" />
-      <option name="METHOD_NAME" value="lengthOfLongestSubstring" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_4Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.shvetsov.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._4Test" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._10Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,13 +138,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_7Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.shvetsov.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.shvetsov" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._7Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_9Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.shvetsov.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.shvetsov" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._9Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._10Test" />
+        <item itemvalue="JUnit._9Test" />
+        <item itemvalue="JUnit._7Test" />
         <item itemvalue="JUnit._6Test" />
         <item itemvalue="JUnit._5Test" />
-        <item itemvalue="JUnit._4Test" />
-        <item itemvalue="JUnit._3Test.lengthOfLongestSubstring" />
-        <item itemvalue="JUnit.All in leetcode" />
       </list>
     </recent_temporary>
   </component>
