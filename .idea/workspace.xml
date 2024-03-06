@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd51b11b-c02a-4d77-bc71-11889395c841" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_121.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_121.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_202.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_202.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/shvetsov/_121Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/shvetsov/_121Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/shvetsov/_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/shvetsov/_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/shvetsov/_2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/shvetsov/_2Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,8 @@
     "Application.HappyNumber_202.executor": "Run",
     "Application.PlusOne_66.executor": "Run",
     "JUnit.All in leetcode.executor": "Run",
+    "JUnit._2Test.executor": "Run",
+    "JUnit._2Test.name.executor": "Run",
     "JUnit._66Test.plusOne.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -85,7 +86,7 @@
       <recent name="org.shvetsov" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in leetcode">
+  <component name="RunManager" selected="JUnit._2Test.name">
     <configuration name="All in leetcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
@@ -94,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_121Test.maxProfit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="_2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -103,14 +104,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._121Test" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_2Test.maxProfit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.shvetsov.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.shvetsov" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._2Test" />
       <option name="METHOD_NAME" value="maxProfit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_121Test.maxProfit2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="_2Test.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -119,24 +135,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._121Test" />
-      <option name="METHOD_NAME" value="maxProfit2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_66Test.plusOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.shvetsov.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.shvetsov" />
-      <option name="MAIN_CLASS_NAME" value="org.shvetsov._66Test" />
-      <option name="METHOD_NAME" value="plusOne" />
+      <option name="MAIN_CLASS_NAME" value="org.shvetsov._2Test" />
+      <option name="METHOD_NAME" value="name" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit._2Test.name" />
+        <item itemvalue="JUnit._2Test.maxProfit" />
+        <item itemvalue="JUnit._2Test" />
         <item itemvalue="JUnit.All in leetcode" />
         <item itemvalue="JUnit._69Test.plusOne" />
-        <item itemvalue="JUnit._121Test.maxProfit2" />
-        <item itemvalue="JUnit._121Test.maxProfit" />
-        <item itemvalue="JUnit._66Test.plusOne" />
       </list>
     </recent_temporary>
   </component>
@@ -200,5 +200,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/shvetsov/_2Test.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
