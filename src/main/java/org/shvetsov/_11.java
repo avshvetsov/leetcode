@@ -12,7 +12,15 @@ import org.shvetsov.core.Level;
 public class _11 {
 
     public int maxArea(int[] height) {
-
-        return 0;
+        int l = 0;
+        int r = height.length - 1;
+        int a = 0;
+        while (r > l) {
+            a = Math.max(a, Math.min(height[l], height[r]) * (r - l));
+            if (height[l] < height[r]) {
+                l++;
+            } else r--;
+        }
+        return a;
     }
 }
