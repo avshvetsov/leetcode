@@ -13,7 +13,16 @@ import org.shvetsov.core.Level;
 public class _2095 {
 
     public ListNode deleteMiddle(ListNode head) {
-
-        return null;
+        if (head.next == null) {
+            return null;
+        }
+        ListNode preMiddle = head;
+        ListNode current = head.next.next;
+        while (current != null && current.next != null) {
+            preMiddle = preMiddle.next;
+            current = current.next.next;
+        }
+        preMiddle.next = preMiddle.next.next;
+        return head;
     }
 }
