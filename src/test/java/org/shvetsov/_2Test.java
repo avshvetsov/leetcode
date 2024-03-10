@@ -2,6 +2,7 @@ package org.shvetsov;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.shvetsov.classes.ListNode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.shvetsov.utils.LinkedListUtils.constructListNode;
@@ -24,4 +25,5 @@ class _2Test {
         assertThat(task.addTwoNumbers(constructListNode(9, 9, 9, 9, 9, 9, 9), constructListNode(9, 9, 9, 9)))
                 .isEqualTo(constructListNode(8, 9, 9, 9, 0, 0, 0, 1));
     }
+
 }
