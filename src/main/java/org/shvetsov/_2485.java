@@ -12,8 +12,20 @@ import org.shvetsov.core.Level;
 public class _2485 {
 
     public int pivotInteger(int n) {
-
-        return 0;
+        int l = 1;
+        int lsum = l;
+        int r = n;
+        int rsum = r;
+        while (l != r) {
+            if (lsum < rsum) {
+                l++;
+                lsum += l;
+            } else {
+                r--;
+                rsum += r;
+            }
+        }
+        return lsum == rsum ? l : -1;
     }
 
 }
