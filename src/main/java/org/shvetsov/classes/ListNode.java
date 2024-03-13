@@ -31,4 +31,9 @@ public class ListNode {
     public int hashCode() {
         return Objects.hash(val, next);
     }
+
+    @Override
+    public String toString() {
+        return next != null ? val + ", " + next : String.valueOf(val);
+    }
 }
