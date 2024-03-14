@@ -8,7 +8,7 @@ import static org.shvetsov.utils.LinkedListUtils.constructListNode;
 
 class _1171Test {
 
-    private static _1171 task;
+    private _1171 task;
 
     @BeforeEach
     public void setup() {
