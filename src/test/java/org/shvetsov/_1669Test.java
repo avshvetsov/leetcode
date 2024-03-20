@@ -31,4 +31,12 @@ class _1669Test {
         ListNode expected = constructListNode(0, 1, 1000000, 1000001, 1000002, 1000003, 1000004, 6);
         assertThat(task.mergeInBetween(list1, 2, 5, list2)).isEqualTo(expected);
     }
+
+    @Test
+    void mergeInBetween3() {
+        ListNode list1 = constructListNode(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+        ListNode list2 = constructListNode(1000000, 1000001, 1000002, 1000003, 1000004, 1000005, 1000006);
+        ListNode expected = constructListNode(0, 1, 2, 1000000, 1000001, 1000002, 1000003, 1000004, 1000005, 1000006, 6, 7, 8, 9);
+        assertThat(task.mergeInBetween(list1, 3, 5, list2)).isEqualTo(expected);
+    }
 }
