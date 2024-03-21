@@ -13,8 +13,19 @@ import org.shvetsov.core.Level;
 public class _206 {
 
     public ListNode reverseList(ListNode head) {
-
-        return null;
+        if (head == null) {
+            return null;
+        }
+        ListNode next = head.next;
+        head.next = null;
+        ListNode prev;
+        while (next != null) {
+            prev = head;
+            head = next;
+            next = head.next;
+            head.next = prev;
+        }
+        return head;
     }
 
 }
