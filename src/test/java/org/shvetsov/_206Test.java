@@ -17,7 +17,7 @@ class _206Test {
 
     @Test
     void reverseList() {
-        assertThat(task.reverseList(constructListNode(1, 2, 3, 4, 5))).isEqualTo(constructListNode(1, 2, 3, 4, 5));
+        assertThat(task.reverseList(constructListNode(1, 2, 3, 4, 5))).isEqualTo(constructListNode(5, 4, 3, 2, 1));
         assertThat(task.reverseList(constructListNode(1, 2))).isEqualTo(constructListNode(2, 1));
         assertThat(task.reverseList(null)).isEqualTo(null);
     }
