@@ -12,7 +12,18 @@ import org.shvetsov.core.Level;
 public class _41 {
 
     public int firstMissingPositive(int[] nums) {
-
-        return -1;
+        for (int i = 0; i < nums.length; i++) {
+            int curr = nums[i];
+            if (curr <= nums.length && curr > 0 && curr != nums[curr - 1]) {
+                nums[i] = nums[curr - 1];
+                nums[curr - 1] = curr;
+                i--;
+            }
+        }
+        int res = 0;
+        while (res < nums.length && nums[res] == res + 1) {
+            res++;
+        }
+        return res + 1;
     }
 }

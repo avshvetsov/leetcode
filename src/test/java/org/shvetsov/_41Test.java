@@ -20,4 +20,10 @@ class _41Test {
         assertThat(task.firstMissingPositive(new int[]{3, 4, -1, 1})).isEqualTo(2);
         assertThat(task.firstMissingPositive(new int[]{7, 8, 9, 11, 12})).isEqualTo(1);
     }
+
+    @Test
+    void firstMissingPositive1() {
+        assertThat(task.firstMissingPositive(new int[]{1})).isEqualTo(2);
+        assertThat(task.firstMissingPositive(new int[]{3, 4, 3, 2, 1, 6})).isEqualTo(5);
+    }
 }
