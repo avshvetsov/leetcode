@@ -11,7 +11,33 @@ import org.shvetsov.core.Level;
 )
 public class _2962 {
     public long countSubarrays(int[] nums, int k) {
+        long res = 0;
+        int max = 0;
+        for (int num : nums) {
+            max = Math.max(max, num);
+        }
+        int l = 0;
+        int lastPosOfL = 0;
+        int r = 0;
+        int countOfMax = 0;
+        int n = nums.length;
 
-        return 0;
+        while (r < nums.length) {
+            if (nums[r] == max) {
+                countOfMax++;
+            }
+            if (countOfMax >= k) {
+                while (l < nums.length && countOfMax >= k) {
+                    if (nums[l] == max) {
+                        countOfMax--;
+                    }
+                    l++;
+                }
+                res += (long) (n - r) * (l - lastPosOfL);
+                lastPosOfL = l;
+            }
+            r++;
+        }
+        return res;
     }
 }
