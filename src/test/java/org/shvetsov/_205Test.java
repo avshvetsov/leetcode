@@ -19,4 +19,13 @@ class _205Test {
         assertThat(task.isIsomorphic("foo", "bar")).isFalse();
         assertThat(task.isIsomorphic("paper", "title")).isTrue();
     }
+
+    @Test
+    void isIsomorphic2() {
+        assertThat(task.isIsomorphic("abcdefghijklmnopqrstuvwxyzva", "abcdefghijklmnopqrstuvwxyzck")).isFalse();
+    }
+    @Test
+    void isIsomorphic3() {
+        assertThat(task.isIsomorphic("aa", "ab")).isFalse();
+    }
 }
