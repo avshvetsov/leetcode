@@ -11,7 +11,11 @@ import org.shvetsov.core.Level;
 )
 public class _58 {
     public int lengthOfLastWord(String s) {
+        return s.trim().substring(s.trim().lastIndexOf(" ") + 1).length();
+    }
 
-        return 0;
+    public int lengthOfLastWord2(String s) {
+        String[] words = s.trim().split(" ");
+        return words[words.length-1].length();
     }
 }
