@@ -11,7 +11,18 @@ import org.shvetsov.core.Level;
 )
 public class _1614 {
     public int maxDepth(String s) {
-
-        return 0;
+        int res = 0;
+        int depth = 0;
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '(') {
+                depth++;
+                res = Math.max(res, depth);
+            }
+            if (chars[i] == ')') {
+                depth--;
+            }
+        }
+        return res;
     }
 }
