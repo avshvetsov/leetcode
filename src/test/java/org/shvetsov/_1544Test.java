@@ -19,4 +19,15 @@ class _1544Test {
         assertThat(task.makeGood("abBAcC")).isEqualTo("");
         assertThat(task.makeGood("s")).isEqualTo("s");
     }
+
+    @Test
+    void makeGood1() {
+        assertThat(task.makeGood("qFxXfQo")).isEqualTo("o");
+    }
+    @Test
+    void makeGood2() {
+        assertThat(task.makeGood("HhvmLxpqQPXlMVQWwq")).isEqualTo("");
+    }
+
+
 }
