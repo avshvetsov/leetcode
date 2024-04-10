@@ -12,7 +12,18 @@ import org.shvetsov.core.Level;
 public class _1700 {
 
     public int countStudents(int[] students, int[] sandwiches) {
+        int[] numberOfStudentsByPrefer = new int[2];
+        for (int i = 0; i < students.length; i++) {
+            numberOfStudentsByPrefer[students[i]]++;
+        }
 
-        return 0;
+        int studentsLeft = students.length;
+        for (int i = 0; i < sandwiches.length; i++) {
+            if (numberOfStudentsByPrefer[sandwiches[i]] == 0) break;
+            numberOfStudentsByPrefer[sandwiches[i]]--;
+            studentsLeft--;
+        }
+
+        return studentsLeft;
     }
 }
