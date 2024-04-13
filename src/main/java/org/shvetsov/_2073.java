@@ -11,7 +11,17 @@ import org.shvetsov.core.Level;
 )
 public class _2073 {
     public int timeRequiredToBuy(int[] tickets, int k) {
-
-        return 0;
+        int res = 0;
+        int n = tickets[k];
+        for (int i = 0; i < tickets.length; i++) {
+            if (i < k) {
+                res += Math.min(n, tickets[i]);
+            } else if (i == k) {
+                res += tickets[i];
+            } else {
+                res += Math.min(n - 1, tickets[i]);
+            }
+        }
+        return res;
     }
 }
