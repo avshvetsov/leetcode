@@ -13,7 +13,7 @@ public class TreeUtils {
     }
 
     private static TreeNode constructTreeHelper(Integer[] arr, int index) {
-        if (index >= arr.length) {
+        if (index >= arr.length || arr[index] == null) {
             return null;
         }
 
