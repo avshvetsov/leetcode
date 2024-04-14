@@ -12,7 +12,18 @@ import org.shvetsov.core.Level;
 )
 public class _404 {
     public int sumOfLeftLeaves(TreeNode root) {
-
-        return 0;
+        return sumHelper(root, false);
     }
+
+    private int sumHelper(TreeNode current, boolean isLeft) {
+        int res = 0;
+        if (current.left == null && current.right == null && isLeft) {
+            res += current.val;
+        }
+        if (current.left != null) res += sumHelper(current.left, true);
+        if (current.right != null) res += sumHelper(current.right, false);
+        return res;
+    }
+
+
 }

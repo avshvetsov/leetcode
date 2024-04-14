@@ -20,4 +20,9 @@ class _404Test {
         assertThat(task.sumOfLeftLeaves(TreeUtils.constructTreeNode(3, 9, 20, null, null, 15, 7))).isEqualTo(24);
         assertThat(task.sumOfLeftLeaves(TreeUtils.constructTreeNode(1))).isEqualTo(0);
     }
+
+    @Test
+    void sumOfLeftLeaves1() {
+        assertThat(task.sumOfLeftLeaves(TreeUtils.constructTreeNode(1, 2))).isEqualTo(2);
+    }
 }
