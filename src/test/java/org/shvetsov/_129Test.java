@@ -20,4 +20,16 @@ class _129Test {
         assertThat(task.sumNumbers(TreeUtils.constructTreeNode(1, 2, 3))).isEqualTo(25);
         assertThat(task.sumNumbers(TreeUtils.constructTreeNode(4, 9, 0, 5, 1))).isEqualTo(1026);
     }
+
+    @Test
+    void sumNumbers1() {
+        assertThat(task.sumNumbers(TreeUtils.constructTreeNode(0, 1))).isEqualTo(1);
+    }
+
+    @Test
+    void sumNumbers2() {
+        assertThat(task.sumNumbers(TreeUtils.constructTreeNode(4, 9, 0, null, 1))).isEqualTo(531);
+    }
+
+
 }

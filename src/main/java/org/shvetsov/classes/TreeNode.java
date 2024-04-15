@@ -1,7 +1,7 @@
 package org.shvetsov.classes;
 
 public class TreeNode {
-    public Integer val;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
