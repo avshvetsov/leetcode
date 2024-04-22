@@ -33,4 +33,17 @@ public final class LinkedListUtils {
         return head;
     }
 
+    public static void prettyPrintLinkedList(ListNode node) {
+        while (node != null && node.next != null) {
+            System.out.print(node.val + " -> ");
+            node = node.next;
+        }
+
+        if (node != null) {
+            System.out.println(node.val);
+        } else {
+            System.out.println("Empty LinkedList");
+        }
+    }
+
 }
