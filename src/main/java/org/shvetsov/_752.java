@@ -15,6 +15,7 @@ public class _752 {
 
     private final int[] pow10 = {1, 10, 100, 1000};
 
+    //TODO: create JMH benchmarks to determine why current solution so efficient
     public int openLock(String[] deadends, String target) {
         int sourceI = 0;
         int targetI = Integer.parseInt(target);
