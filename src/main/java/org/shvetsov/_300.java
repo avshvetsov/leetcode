@@ -12,7 +12,22 @@ import org.shvetsov.core.Level;
 public class _300 {
 
     public int lengthOfLIS(int[] nums) {
-
-        return 0;
+        int result = 0;
+        int[] dp = new int[nums.length];
+        for (int curr : nums) {
+            int j = result - 1;
+            if (j < 0 || curr > dp[j]) {
+                dp[result] = curr;
+                result++;
+            } else {
+                while (j >= 0 && curr < dp[j]) {
+                    j--;
+                }
+                if (j < 0 || curr > dp[j]) {
+                    dp[j + 1] = curr;
+                }
+            }
+        }
+        return result;
     }
 }
