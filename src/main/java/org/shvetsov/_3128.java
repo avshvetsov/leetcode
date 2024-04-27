@@ -4,13 +4,13 @@ import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
 @LeetCode(
-        number = 100292,
-        name = "Find All Possible Stable Binary Arrays I",
+        number = 3128,
+        name = "Right Triangles",
         level = Level.MEDIUM,
         tags = {}
 )
-public class _100292 {
-    public int numberOfStableArrays(int zero, int one, int limit) {
+public class _3128 {
+    public long numberOfRightTriangles(int[][] grid) {
 
         return 0;
     }
