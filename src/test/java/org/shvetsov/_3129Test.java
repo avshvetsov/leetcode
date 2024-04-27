@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class _100292Test {
+class _3129Test {
 
-    private static _100292 task;
+    private static _3129 task;
 
     @BeforeEach
     public void setup() {
-        task = new _100292();
+        task = new _3129();
     }
 
     @Test
