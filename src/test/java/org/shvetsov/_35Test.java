@@ -19,5 +19,6 @@ class _35Test {
         assertThat(task.searchInsert(new int[]{1, 3, 5, 6}, 5)).isEqualTo(2);
         assertThat(task.searchInsert(new int[]{1, 3, 5, 6}, 2)).isEqualTo(1);
         assertThat(task.searchInsert(new int[]{1, 3, 5, 6}, 7)).isEqualTo(4);
+        assertThat(task.searchInsert(new int[]{1,3}, 1)).isEqualTo(0);
     }
 }
