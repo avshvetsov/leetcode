@@ -53,53 +53,76 @@ public class _834 {
         return -1;
     }
 
+    public static class MemoryEfficient {
 
-    //TODO: learn how to solve 'Memory Limit Exceeded' problem
-    public static class MemoryEfficientButNotMy {
-        private Map<Integer, List<Integer>> graph;
         private int[] count;
         private int[] res;
-
-        private void dfs(int node, int parent) {
-            for (int child : graph.get(node)) {
-                if (child != parent) {
-                    dfs(child, node);
-                    count[node] += count[child];
-                    res[node] += res[child] + count[child];
-                }
-            }
-        }
-
-        private void dfs2(int node, int parent) {
-            for (int child : graph.get(node)) {
-                if (child != parent) {
-                    res[child] = res[node] - count[child] + (count.length - count[child]);
-                    dfs2(child, node);
-                }
-            }
-        }
+        private int n;
+        private Map<Integer, List<Integer>> graph;
 
         public int[] sumOfDistancesInTree(int n, int[][] edges) {
-            graph = new HashMap<>();
+            this.n = n;
             count = new int[n];
             res = new int[n];
-            Arrays.fill(count, 1);
-
-            for (int i = 0; i < n; i++) {
-                graph.put(i, new ArrayList<>());
-            }
-
+            graph = new HashMap<>();
             for (int[] edge : edges) {
-                int u = edge[0];
-                int v = edge[1];
-                graph.get(u).add(v);
-                graph.get(v).add(u);
+                this.graph.computeIfAbsent(edge[0], k -> new ArrayList<>()).add(edge[1]);
+                this.graph.computeIfAbsent(edge[1], k -> new ArrayList<>()).add(edge[0]);
             }
-
-            dfs(0, -1);
-            dfs2(0, -1);
-
+            calculateCountChild(0, -1);
+            calculateDistances(0, -1);
             return res;
         }
+
+        private int calculateCountChild(int current, int prev) {
+            if (count[current] > 0) return count[current];
+            int res = 1;
+            for (int next : graph.getOrDefault(current, Collections.emptyList())) {
+                if (next != prev) {
+                    res += calculateCountChild(next, current);
+                }
+            }
+            count[current] = res;
+            return res;
+        }
+
+        private void calculateDistances(int current, int prev) {
+            if (prev == -1) {
+                this.res[current] = calculateSingleDistance(0);
+                for (Integer next : graph.getOrDefault(current, Collections.emptyList())) {
+                    calculateDistances(next, current);
+                }
+            } else {
+                if (count[prev] != 0) {
+                    res[current] = res[prev] - count[current] + (n - count[current]);
+                    for (int next : graph.get(current)) {
+                        if (next != prev) {
+                            calculateDistances(next, current);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private int calculateSingleDistance(int current) {
+            int res = 0;
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(current);
+            Set<Integer> visited = new HashSet<>();
+            while (!queue.isEmpty()) {
+                int cur = queue.poll();
+                visited.add(cur);
+                for (Integer next : graph.getOrDefault(cur, Collections.emptyList())) {
+                    if (!visited.contains(next)) {
+                        res += count[next];
+                        queue.offer(next);
+                    }
+                }
+            }
+            return res;
+        }
+
     }
+
 }
