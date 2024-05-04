@@ -20,4 +20,9 @@ class _881Test {
         assertThat(task.numRescueBoats(new int[]{3, 2, 2, 1}, 3)).isEqualTo(3);
         assertThat(task.numRescueBoats(new int[]{3, 5, 3, 4}, 5)).isEqualTo(4);
     }
+
+    @Test
+    void numRescueBoats1() {
+        assertThat(task.numRescueBoats(new int[]{3,2,3,2,2}, 6)).isEqualTo(3);
+    }
 }
