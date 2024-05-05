@@ -12,6 +12,7 @@ import org.shvetsov.core.Level;
 )
 public class _237 {
     public void deleteNode(ListNode head, ListNode node) {
-
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 }
