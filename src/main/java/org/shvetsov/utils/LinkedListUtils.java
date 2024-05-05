@@ -46,4 +46,12 @@ public final class LinkedListUtils {
         }
     }
 
+    public static ListNode getNodeByIndex(ListNode head, int i) {
+        ListNode node = head;
+        while (i > 0 && node != null) {
+            node = node.next;
+            i--;
+        }
+        return node;
+    }
 }
