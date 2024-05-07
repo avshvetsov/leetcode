@@ -16,7 +16,7 @@ class _14Test {
 
     @Test
     void longestCommonPrefix() {
-        assertThat(task.longestCommonPrefix(new String[]{"flower","flow","flight"})).isEqualTo("lf");
+        assertThat(task.longestCommonPrefix(new String[]{"flower","flow","flight"})).isEqualTo("fl");
         assertThat(task.longestCommonPrefix(new String[]{"dog","racecar","car"})).isEqualTo("");
     }
 }
