@@ -20,4 +20,9 @@ class _3075Test {
         assertThat(task.maximumHappinessSum(new int[]{1, 1, 1, 1}, 2)).isEqualTo(1);
         assertThat(task.maximumHappinessSum(new int[]{2, 3, 4, 5}, 1)).isEqualTo(5);
     }
+
+    @Test
+    void maximumHappinessSumTC() {
+        assertThat(task.maximumHappinessSum(new int[]{12, 1, 42}, 3)).isEqualTo(53);
+    }
 }
