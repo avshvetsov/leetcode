@@ -5,6 +5,7 @@ import org.shvetsov.core.Level;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 @LeetCode(
         number = 857,
@@ -15,101 +16,85 @@ import java.util.Comparator;
 public class _857 {
 
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
+        int n = quality.length;
+        //Создаем массив состоящий из отношения w/q (цена единицы q для работника) и q
+        //эти 2 показателя важны, потому что сумма з/п выбранных работников всегда равна произведению
+        //максимального значения w/q группы и суммы q всей группы
+        double[][] wq = new double[n][2];
+        for (int i = 0; i < n; i++) {
+            wq[i][0] = (double) wage[i] / quality[i];
+            wq[i][1] = quality[i];
+        }
+        //сортируем по w/q, чтобы взять группу с минимальным w/q
+        Arrays.sort(wq, Comparator.comparingDouble(value -> value[0]));
 
-        return 0;
-    }
+        //берем группу чей w/q будет минимальным, считаем ее отправной точкой
+        double[][] bestByQuality = Arrays.copyOfRange(wq, 0, k);
+        double bestByQualityMaxRatio = bestByQuality[bestByQuality.length - 1][0];
+        double bestByQualityQualitySum = Arrays.stream(bestByQuality).mapToDouble(value -> value[1]).sum();
+        double bestByQualityResult = bestByQualityMaxRatio * bestByQualityQualitySum;
+        double result = bestByQualityResult;
 
-    public static class NotCorrect2 {
-
-        public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
-            int n = quality.length;
-            double[][] deltaMatrix = new double[n][n];
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    deltaMatrix[i][j] = countWage(new int[]{quality[i], wage[i]}, new int[]{quality[j], wage[j]}) /*- wage[i]*/;
-                }
-            }
-            double[] sum = new double[n];
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    sum[i] += deltaMatrix[i][j];
-                    sum[j] += deltaMatrix[i][j];
-                }
-            }
-
-            int[] deletedWorkers = new int[n];
-            int l = n;
-            while (l > k) {
-                //найти макс в sum
-                int worker = 0;
-                double max = Double.MIN_VALUE;
-                for (int i = 0; i < n; i++) {
-                    if (sum[i] > max) {
-                        max = sum[i];
-                        worker = i;
-                    }
-                }
-
-                deletedWorkers[worker] = k;
-
-                //вычесть из deltaMatrix значения вычеркнутого сотрудника
-                for (int i = 0; i < n; i++) {
-                    sum[i] -= deltaMatrix[worker][i];
-                    sum[i] -= deltaMatrix[i][worker];
-                    deltaMatrix[worker][i] = 0;
-                    deltaMatrix[i][worker] = 0;
-                }
-                sum[worker] = 0;
-                l--;
-            }
-
-            double res = 0;
-            for (int i = 0; i < n; i++) {
-                double max = Double.MIN_VALUE;
-                for (int j = 0; j < n; j++) {
-                    max = Math.max(max, deltaMatrix[i][j]);
-                }
-                res += max;
-            }
-
-            return res;
+        //для удобства работы засовываем все q в PriorityQueue
+        PriorityQueue<Double> pq = new PriorityQueue<>(k, Comparator.reverseOrder());
+        for (double[] elem : bestByQuality) {
+            pq.offer(elem[1]);
         }
 
-        private double countWage(int[] curr, int[] depends) {
-            double fairWage = (double) (depends[1] * curr[0]) / depends[0];
-            return curr[1] > fairWage ? curr[1] : fairWage;
+        //берем работинков, с которыми w/q будет повышаться, но есть верояность что сумма q будет снижаться
+        double[][] candidates = Arrays.copyOfRange(wq, k, n);
+        for (double[] candidate : candidates) {
+            //если q кандидата меньше чем самое большое q в группе, то заменяем работника с наибольшим q на кандидата и пересчитываем их з/п
+            if (pq.peek() > candidate[1]) {
+                Double maxQ = pq.poll();
+                bestByQualityMaxRatio = candidate[0];
+                bestByQualityQualitySum = bestByQualityQualitySum - maxQ + candidate[1];
+                bestByQualityResult = bestByQualityMaxRatio * bestByQualityQualitySum;
+                pq.offer(candidate[1]);
+            }
+            //если суммарная з/п лучших по q сотрудников ниже чем предыдущая лучшая (по w/q), то переприсваисвем результат
+            if (bestByQualityResult < result) {
+                result = bestByQualityResult;
+            }
         }
+        return result;
     }
 
 
-    public static class NotCorrect {
-        public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
-            if (k == 1) {
-                return Arrays.stream(wage).min().orElseGet(() -> 0);
-            }
 
+    public static class NoPriorityQueue {
+
+        public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
             int n = quality.length;
             double[][] wq = new double[n][2];
             for (int i = 0; i < n; i++) {
                 wq[i][0] = (double) wage[i] / quality[i];
-                wq[i][1] = i;
+                wq[i][1] = quality[i];
             }
             Arrays.sort(wq, Comparator.comparingDouble(value -> value[0]));
 
-            int i = 0, j = k - 1;
-            double res = Double.MAX_VALUE;
-            while (j < n) {
-                double currSum = 0;
-                double maxFraction = wq[j][0];
-                for (int l = i; l <= j; l++) {
-                    int pos = (int) wq[l][1];
-                    currSum += maxFraction * quality[pos];
+            double[][] bestByQuality = Arrays.copyOfRange(wq, 0, k);
+            double bestByQualityMaxRatio = bestByQuality[bestByQuality.length - 1][0];
+            double bestByQualityQualitySum = Arrays.stream(bestByQuality).mapToDouble(value -> value[1]).sum();
+            double bestByQualityResult = bestByQualityMaxRatio * bestByQualityQualitySum;
+            Arrays.sort(bestByQuality, Comparator.comparing(value -> value[1], Comparator.reverseOrder()));
+
+            double result = bestByQualityResult;
+
+            double[][] candidates = Arrays.copyOfRange(wq, k, n);
+            for (double[] candidate : candidates) {
+                if (bestByQuality[0][1] > candidate[1]) {
+                    bestByQualityMaxRatio = candidate[0];
+                    bestByQualityQualitySum = bestByQualityQualitySum - bestByQuality[0][1] + candidate[1];
+                    bestByQualityResult = bestByQualityMaxRatio * bestByQualityQualitySum;
+                    bestByQuality[0] = candidate;
+                    Arrays.sort(bestByQuality, Comparator.comparing(value -> value[1], Comparator.reverseOrder()));
                 }
-                res = Math.min(res, currSum);
-                i++;
-                j++;
+                if (bestByQualityResult < result) {
+                    result = bestByQualityResult;
+                }
             }
-            return res;
+            return result;
         }
     }
 }
