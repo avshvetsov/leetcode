@@ -19,4 +19,10 @@ class _861Test {
         assertThat(task.matrixScore(new int[][]{{0, 0, 1, 1}, {1, 0, 1, 0}, {1, 1, 0, 0}})).isEqualTo(39);
         assertThat(task.matrixScore(new int[][]{{0}})).isEqualTo(1);
     }
+
+    @Test
+    void matrixScore1() {
+        assertThat(task.matrixScore(new int[][]{{0, 1}, {1, 1}})).isEqualTo(5);
+
+    }
 }
