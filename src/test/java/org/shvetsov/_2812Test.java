@@ -2,10 +2,9 @@ package org.shvetsov;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.shvetsov.utils.GeneralUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.shvetsov.utils.GeneralUtils.*;
+import static org.shvetsov.utils.GeneralUtils.twoDimArrayToListOfLists;
 
 class _2812Test {
 
