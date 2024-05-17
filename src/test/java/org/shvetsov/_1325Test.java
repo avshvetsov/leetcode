@@ -2,7 +2,6 @@ package org.shvetsov;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.shvetsov.utils.TreeUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.shvetsov.utils.TreeUtils.constructTreeNode;
@@ -30,4 +29,5 @@ class _1325Test {
     void removeLeafNodesExample3() {
         assertThat(task.removeLeafNodes(constructTreeNode(1, 2, null, 2, null, 2), 2)).isEqualTo(constructTreeNode(1));
     }
+
 }

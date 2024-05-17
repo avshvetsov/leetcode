@@ -49,4 +49,29 @@ public class TreeUtils {
     public static void prettyPrintTree(TreeNode node) {
         prettyPrintTree(node,  "", true);
     }
+
+
+
+    public static void prettyPrintTree(TreeNode node, String prefix, boolean isLeft, StringBuilder acc) {
+        if (node == null) {
+            acc.append("Empty tree");
+            return;
+        }
+
+        if (node.right != null) {
+            prettyPrintTree(node.right, prefix + (isLeft ? "│   " : "    "), false, acc);
+        }
+
+        acc.append(prefix).append(isLeft ? "└── " : "┌── ").append(node.val).append("\n");
+
+        if (node.left != null) {
+            prettyPrintTree(node.left, prefix + (isLeft ? "    " : "│   "), true, acc);
+        }
+    }
+
+    public static String treeToString(TreeNode node) {
+        StringBuilder acc = new StringBuilder("\n");
+        prettyPrintTree(node, "", true, acc);
+        return acc.toString();
+    }
 }
