@@ -12,7 +12,17 @@ import org.shvetsov.core.Level;
 public class _1863 {
 
     public int subsetXORSum(int[] nums) {
+        return subsetHelper(nums, 0, nums.length, 0);
+    }
 
-        return 0;
+    private int subsetHelper(int[] nums, int xor, int size, int f) {
+        if (size == 0) return 0;
+        int res = 0;
+        for (int i = f; i < nums.length; i++) {
+            int newXor = xor ^ nums[i];
+            res += newXor;
+            res += subsetHelper(nums, newXor, size - 1, i + 1);
+        }
+        return res;
     }
 }
