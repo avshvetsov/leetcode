@@ -2,7 +2,6 @@ package org.shvetsov;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.shvetsov.utils.LinkedListUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +27,7 @@ class _78Test {
             add(List.of(2));
             add(List.of(2, 3));
             add(List.of(1, 2, 3));
+            add(List.of(3));
         }};
         assertThat(task.subsets(new int[]{1, 2, 3})).containsExactlyInAnyOrderElementsOf(expected);
     }
