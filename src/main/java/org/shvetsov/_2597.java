@@ -49,6 +49,7 @@ public class _2597 {
     }
 
 
+    //TODO: нужно доделать логику
     public static class EfficientNotFinishedSubsets {
         public int beautifulSubsets(int[] nums, int k) {
             int result = 0;
