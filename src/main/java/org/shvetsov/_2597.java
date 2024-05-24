@@ -3,8 +3,7 @@ package org.shvetsov;
 import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @LeetCode(
         number = 2597,
@@ -48,6 +47,42 @@ public class _2597 {
             }
         }
     }
+
+
+    public static class EfficientNotFinishedSubsets {
+        public int beautifulSubsets(int[] nums, int k) {
+            int result = 0;
+            Arrays.sort(nums);
+            int[][] dp = new int[nums.length][nums.length];
+            for (int i = nums.length - 1; i >= 0; i--) {
+                int blocked = nums[i] + k;
+                Set<Integer> blockedDp = new HashSet<>();
+                for (int j = nums.length - 1; j >= i + 1; j--) {
+                    dp[i][j] = dp[j][j];
+                    if (nums[j] == blocked) {
+                        blockedDp.add(j);
+                    }
+                }
+                dp[i][i] = 1;
+                int del = 0;
+                for (int m = dp[i].length - 1; m > i; m--) {
+                    for (Integer b : blockedDp) {
+                        dp[i][m] -= dp[m][b];
+                        for (int n = b - 1; n > m; n--) {
+                            dp[i][m] -= dp[m][b];
+                            del += dp[m][b];
+                        }
+                    }
+                    dp[i][i] += dp[i][m];
+                }
+                result += dp[i][i];
+                dp[i][i] += del;
+            }
+
+            return result;
+        }
+    }
+
 
     public static class BruteforceWithDp {
         private int result = 0;
