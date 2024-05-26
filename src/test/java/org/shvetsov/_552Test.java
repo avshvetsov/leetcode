@@ -28,4 +28,9 @@ class _552Test {
     void checkRecordExample3() {
         assertThat(task.checkRecord(10101)).isEqualTo(183_236_316);
     }
+
+    @Test
+    void checkRecordTC4() {
+        assertThat(task.checkRecord(4)).isEqualTo(43);
+    }
 }
