@@ -28,4 +28,5 @@ class _260Test {
     void singleNumberExample3() {
         assertThat(task.singleNumber(new int[]{0, 1})).containsExactlyInAnyOrder(0, 1);
     }
+
 }
