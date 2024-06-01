@@ -11,7 +11,11 @@ import org.shvetsov.core.Level;
 )
 public class _3110 {
     public int scoreOfString(String s) {
-
-        return 0;
+        char[] chars = s.toCharArray();
+        int res = 0;
+        for (int i = 1; i < chars.length; i++) {
+            res += Math.abs(chars[i] - chars[i - 1]);
+        }
+        return res;
     }
 }
