@@ -23,4 +23,10 @@ class _409Test {
     void longestPalindromeExample2() {
         assertThat(task.longestPalindrome("a")).isEqualTo(1);
     }
+
+    @Test
+    void name() {
+        System.out.println(((int) 'z' - 'A'));
+        System.out.println(((int) 'a'));
+    }
 }
