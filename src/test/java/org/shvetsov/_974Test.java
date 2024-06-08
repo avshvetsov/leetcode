@@ -23,4 +23,13 @@ class _974Test {
     void subarraysDivByKExample2() {
         assertThat(task.subarraysDivByK(new int[]{5}, 9)).isEqualTo(0);
     }
+
+    @Test
+    void subarraysDivByKTC46() {
+        assertThat(task.subarraysDivByK(new int[]{-1, 2, 9}, 2)).isEqualTo(2);
+    }
+    @Test
+    void subarraysDivByKTC49() {
+        assertThat(task.subarraysDivByK(new int[]{2,-2,2,-4}, 6)).isEqualTo(2);
+    }
 }
