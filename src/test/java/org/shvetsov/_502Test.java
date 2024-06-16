@@ -23,4 +23,5 @@ class _502Test {
     void findMaximizedCapitalExample2() {
         assertThat(task.findMaximizedCapital(3, 0, new int[]{1, 2, 3}, new int[]{0, 1, 2})).isEqualTo(6);
     }
+
 }
