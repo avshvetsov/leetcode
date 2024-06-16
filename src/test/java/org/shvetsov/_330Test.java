@@ -28,4 +28,14 @@ class _330Test {
     void minPatchesExample3() {
         assertThat(task.minPatches(new int[]{1, 2, 2}, 5)).isEqualTo(0);
     }
+
+    @Test
+    void minPatchesTC3() {
+        assertThat(task.minPatches(new int[]{1, 2, 31, 33}, 2147483647)).isEqualTo(28);
+    }
+
+    @Test
+    void minPatchesTC4() {
+        assertThat(task.minPatches(new int[]{2, 4}, 7)).isEqualTo(1);
+    }
 }

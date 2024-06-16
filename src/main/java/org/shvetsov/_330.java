@@ -11,7 +11,18 @@ import org.shvetsov.core.Level;
 )
 public class _330 {
     public int minPatches(int[] nums, int n) {
-
-        return 0;
+        int result = 0;
+        long endNum = 1;
+        int i = 0;
+        while (n >= endNum) {
+            if (i < nums.length && nums[i] <= endNum) {
+                endNum += nums[i];
+                i++;
+            } else {
+                endNum *= 2;
+                result++;
+            }
+        }
+        return result;
     }
 }
