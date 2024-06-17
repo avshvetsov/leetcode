@@ -23,4 +23,9 @@ class _633Test {
     void judgeSquareSumExample2() {
         assertThat(task.judgeSquareSum(3)).isFalse();
     }
+
+    @Test
+    void judgeSquareSumTC124() {
+        assertThat(task.judgeSquareSum(2147483600)).isTrue();
+    }
 }
