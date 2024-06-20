@@ -23,4 +23,9 @@ class _1552Test {
     void maxDistanceExample2() {
         assertThat(task.maxDistance(new int[]{5, 4, 3, 2, 1, 1000000000}, 2)).isEqualTo(999999999);
     }
+
+    @Test
+    void maxDistanceTC30() {
+        assertThat(task.maxDistance(new int[]{79, 74, 57, 22}, 4)).isEqualTo(5);
+    }
 }
