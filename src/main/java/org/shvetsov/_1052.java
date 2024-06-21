@@ -11,7 +11,26 @@ import org.shvetsov.core.Level;
 )
 public class _1052 {
     public int maxSatisfied(int[] customers, int[] grumpy, int minutes) {
-
-        return 0;
+        int[] unsatisfied = new int[customers.length];
+        int result = 0;
+        for (int i = 0; i < unsatisfied.length; i++) {
+            if (grumpy[i] == 1) {
+                unsatisfied[i] = customers[i];
+            } else result += customers[i];
+        }
+        int l = 0, r = minutes;
+        int currSum = 0;
+        for (int i = 0; i < r; i++) {
+            currSum += unsatisfied[i];
+        }
+        int maxSum = currSum;
+        while (r < unsatisfied.length) {
+            currSum = currSum + unsatisfied[r] - unsatisfied[l];
+            maxSum = Math.max(maxSum, currSum);
+            l++;
+            r++;
+        }
+        result += maxSum;
+        return result;
     }
 }
