@@ -12,7 +12,20 @@ import org.shvetsov.core.Level;
 )
 public class _1038 {
     public TreeNode bstToGst(TreeNode root) {
-
+        dfs(root, 0);
         return root;
+    }
+
+    public int dfs(TreeNode curr, int acc) {
+        int sum = 0;
+        if (curr.right != null) {
+            sum += dfs(curr.right, sum + acc);
+        }
+        sum += curr.val;
+        curr.val = sum + acc;
+        if (curr.left != null) {
+            sum += dfs(curr.left, sum + acc);
+        }
+        return sum;
     }
 }
