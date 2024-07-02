@@ -16,11 +16,11 @@ class _350Test {
 
     @Test
     void intersectExample1() {
-        assertThat(task.intersect(new int[]{1, 2, 2, 1}, new int[]{2, 2})).isEqualTo(new int[]{2, 2});
+        assertThat(task.intersect(new int[]{1, 2, 2, 1}, new int[]{2, 2})).containsExactlyInAnyOrder(2, 2);
     }
 
     @Test
     void intersectExample2() {
-        assertThat(task.intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})).isEqualTo(new int[]{4, 9});
+        assertThat(task.intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})).containsExactlyInAnyOrder(4, 9);
     }
 }
