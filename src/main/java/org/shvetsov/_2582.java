@@ -11,7 +11,6 @@ import org.shvetsov.core.Level;
 )
 public class _2582 {
     public int passThePillow(int n, int time) {
-
-        return 0;
+        return time / (n - 1) % 2 == 0 ? 1 + time % (n - 1) : n - time % (n - 1);
     }
 }
