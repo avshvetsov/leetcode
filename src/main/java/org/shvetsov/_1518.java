@@ -11,7 +11,14 @@ import org.shvetsov.core.Level;
 )
 public class _1518 {
     public int numWaterBottles(int numBottles, int numExchange) {
-
-        return 0;
+        int result = 0;
+        int freeBottles = 0;
+        while (numBottles > 0) {
+            result += numBottles;
+            freeBottles += numBottles;
+            numBottles = freeBottles / numExchange;
+            freeBottles -= numBottles * numExchange;
+        }
+        return result;
     }
 }
