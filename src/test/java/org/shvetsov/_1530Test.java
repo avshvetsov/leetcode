@@ -29,4 +29,9 @@ class _1530Test {
     void countPairsExample3() {
         assertThat(task.countPairs(TreeUtils.constructTreeNode(7, 1, 4, 6, null, 5, 3, null, null, null, null, null, 2), 3)).isEqualTo(1);
     }
+
+    @Test
+    void countPairsTC3() {
+        assertThat(task.countPairs(TreeUtils.constructTreeNode(100), 1)).isEqualTo(0);
+    }
 }
