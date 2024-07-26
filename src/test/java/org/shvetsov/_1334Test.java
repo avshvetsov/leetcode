@@ -23,4 +23,19 @@ class _1334Test {
     void findTheCityExample2() {
         assertThat(task.findTheCity(5, new int[][]{{0, 1, 2}, {0, 4, 8}, {1, 2, 3}, {1, 4, 2}, {2, 3, 1}, {3, 4, 1}}, 2)).isEqualTo(0);
     }
+
+    @Test
+    void findTheCityTC2() {
+        assertThat(task.findTheCity(6, new int[][]{{0,3,7},{2,4,1},{0,1,5},{2,3,10},{1,3,6},{1,2,1}}, 417)).isEqualTo(5);
+    }
+    
+    @Test
+    void findTheCityTC38() {
+        assertThat(task.findTheCity(6, new int[][]{{3,5,2},{0,5,5},{4,5,7},{0,2,5},{0,3,1},{3,4,1},{2,5,4},{2,3,8},{1,2,10},{1,3,1}}, 6193)).isEqualTo(5);
+    }
+    
+    @Test
+    void findTheCityTC50() {
+        assertThat(task.findTheCity(6, new int[][]{{0,1,10},{0,2,1},{2,3,1},{1,3,1},{1,4,1},{4,5,10}}, 20)).isEqualTo(5);
+    }
 }
