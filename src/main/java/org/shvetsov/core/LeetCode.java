@@ -9,4 +9,8 @@ public @interface LeetCode {
 
     String[] tags();
 
+    String[] todo() default {};
+
+
+
 }
