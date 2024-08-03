@@ -26,6 +26,6 @@ class _1460Test {
 
     @Test
     void canBeEqualExample3() {
-        assertThat(task.canBeEqual(new int[]{3, 7, 9}, new int[]{3, 7, 11})).isTrue();
+        assertThat(task.canBeEqual(new int[]{3, 7, 9}, new int[]{3, 7, 11})).isFalse();
     }
 }
