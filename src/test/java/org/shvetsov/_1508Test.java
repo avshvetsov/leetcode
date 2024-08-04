@@ -18,12 +18,14 @@ class _1508Test {
     void rangeSumExample1() {
         assertThat(task.rangeSum(new int[]{1, 2, 3, 4}, 4, 1, 5)).isEqualTo(13);
     }
+
     @Test
     void rangeSumExample2() {
-        assertThat(task.rangeSum(new int[]{1, 2, 3, 4}, 4, 1, 10)).isEqualTo(50);
+        assertThat(task.rangeSum(new int[]{1, 2, 3, 4}, 4, 3, 4)).isEqualTo(6);
     }
+
     @Test
     void rangeSumExample3() {
-        assertThat(task.rangeSum(new int[]{1, 2, 3, 4}, 4, 3, 3)).isEqualTo(6);
+        assertThat(task.rangeSum(new int[]{1, 2, 3, 4}, 4, 1, 10)).isEqualTo(50);
     }
 }
