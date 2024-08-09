@@ -21,6 +21,6 @@ class _840Test {
 
     @Test
     void numMagicSquaresInsideExample2() {
-        assertThat(task.numMagicSquaresInside(new int[][]{{8}})).isEqualTo(1);
+        assertThat(task.numMagicSquaresInside(new int[][]{{8}})).isEqualTo(0);
     }
 }
