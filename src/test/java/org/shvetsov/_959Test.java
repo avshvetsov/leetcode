@@ -26,4 +26,8 @@ class _959Test {
     void regionsBySlashesExample3() {
         assertThat(task.regionsBySlashes(new String[]{"/\\","\\/"})).isEqualTo(5);
     }
+    @Test
+    void regionsBySlashesTC5() {
+        assertThat(task.regionsBySlashes(new String[]{"//","/ "})).isEqualTo(3);
+    }
 }
