@@ -21,6 +21,11 @@ class _1568Test {
 
     @Test
     void minDaysExample2() {
-        assertThat(task.minDays(new int[][]{{1,1}})).isEqualTo(2);
+        assertThat(task.minDays(new int[][]{{1, 1}})).isEqualTo(2);
+    }
+
+    @Test
+    void minDaysTC87() {
+        assertThat(task.minDays(new int[][]{{1, 1, 0, 1, 1}, {1, 1, 1, 1, 1}, {1, 1, 0, 1, 1}, {1, 1, 0, 1, 1}})).isEqualTo(1);
     }
 }
