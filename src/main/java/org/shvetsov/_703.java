@@ -3,6 +3,9 @@ package org.shvetsov;
 import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 @LeetCode(
         number = 703,
         name = "Kth Largest Element in a Stream",
@@ -11,16 +14,30 @@ import org.shvetsov.core.Level;
 )
 public class _703 {
 
-
     static class KthLargest {
 
-        public KthLargest(int k, int[] nums) {
+        private final PriorityQueue<Integer> pq;
 
+        public KthLargest(int k, int[] nums) {
+            pq = new PriorityQueue<>(k, Comparator.naturalOrder());
+            if (k > nums.length) {
+                pq.add(Integer.MIN_VALUE);
+            }
+            for (int i = 0; i < nums.length; i++) {
+                if (i < k) pq.add(nums[i]);
+                else if (pq.peek() < nums[i]) {
+                    pq.poll();
+                    pq.add(nums[i]);
+                }
+            }
         }
 
         public int add(int val) {
-
-            return 0;
+            if (pq.peek() < val) {
+                pq.add(val);
+                pq.poll();
+            }
+            return pq.peek();
         }
     }
 
