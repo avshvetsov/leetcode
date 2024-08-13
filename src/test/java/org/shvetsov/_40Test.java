@@ -19,12 +19,12 @@ class _40Test {
     @Test
     void combinationSum2Example1() {
         assertThat(task.combinationSum2(new int[]{10, 1, 2, 7, 6, 1, 5}, 8))
-                .hasSameElementsAs(List.of(List.of(1, 1, 6), List.of(1, 2, 5), List.of(1, 7), List.of(2, 6)));
+                .containsExactlyInAnyOrder(List.of(1, 1, 6), List.of(1, 2, 5), List.of(1, 7), List.of(2, 6));
     }
 
     @Test
     void combinationSum2Example2() {
         assertThat(task.combinationSum2(new int[]{2, 5, 2, 1, 2}, 5))
-                .hasSameElementsAs(List.of(List.of(1, 2, 2), List.of(5)));
+                .containsExactlyInAnyOrder(List.of(1, 2, 2), List.of(5));
     }
 }
