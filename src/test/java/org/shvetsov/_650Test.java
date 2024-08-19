@@ -23,4 +23,9 @@ class _650Test {
     void minStepsExample2() {
         assertThat(task.minSteps(1)).isEqualTo(0);
     }
+
+    @Test
+    void minStepsTC0() {
+        assertThat(task.minSteps(8)).isEqualTo(6);
+    }
 }
