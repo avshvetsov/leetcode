@@ -23,4 +23,34 @@ class _664Test {
     void strangePrinterExample2() {
         assertThat(task.strangePrinter("aba")).isEqualTo(2);
     }
+
+    @Test
+    void strangePrinterTC25() {
+        assertThat(task.strangePrinter("abcabc")).isEqualTo(5);
+    }
+
+    @Test
+    void strangePrinterTC41() {
+        assertThat(task.strangePrinter("abababac")).isEqualTo(5);
+    }
+
+    @Test
+    void strangePrinterTC51() {
+        assertThat(task.strangePrinter("baacdddaaddaaaaccbddbcabdaabdbbcdcbbbacbddcabcaaa")).isEqualTo(19);
+    }
+
+    @Test
+    void strangePrinterTC53() {
+        assertThat(task.strangePrinter("abcabcabc")).isEqualTo(7);
+    }
+
+    @Test
+    void strangePrinterTC58() {
+        assertThat(task.strangePrinter("tbgtgb")).isEqualTo(4);
+    }
+
+    @Test
+    void strangePrinterTC152() {
+        assertThat(task.strangePrinter("ddbbababdbccadcccbbbacaddcaacdbcddcddddacaadcabd")).isEqualTo(19);
+    }
 }
