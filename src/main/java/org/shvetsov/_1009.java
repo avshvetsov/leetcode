@@ -11,7 +11,8 @@ import org.shvetsov.core.Level;
 )
 public class _1009 {
     public int bitwiseComplement(int n) {
-
-        return -1;
+        int bitLength = Integer.toBinaryString(n).length();
+        int mask = (1 << bitLength) - 1;
+        return n ^ mask;
     }
 }
