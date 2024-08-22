@@ -11,7 +11,10 @@ import org.shvetsov.core.Level;
 )
 public class _476 {
     public int findComplement(int num) {
-
-        return 0;
+        int i = 1;
+        while (i <= num && i > 0) {
+            i = i << 1;
+        }
+        return i < 0 ? num ^ Integer.MAX_VALUE : num ^ (i - 1);
     }
 }
