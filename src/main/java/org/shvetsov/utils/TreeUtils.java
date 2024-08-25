@@ -12,6 +12,7 @@ public class TreeUtils {
     }
 
     public static TreeNode constructTreeNode(Integer... treeValues) {
+        if (treeValues.length == 0 || treeValues[0] == null) return null;
         TreeNode root = new TreeNode(treeValues[0]);
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
