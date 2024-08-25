@@ -4,7 +4,7 @@ import org.shvetsov.classes.TreeNode;
 import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
 @LeetCode(
@@ -15,7 +15,15 @@ import java.util.List;
 )
 public class _145 {
     public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        dfs(root, result);
+        return result;
+    }
 
-        return Collections.emptyList();
+    private void dfs(TreeNode current, List<Integer> result) {
+        if (current == null) return;
+        if (current.left != null) dfs(current.left, result);
+        if (current.right != null) dfs(current.right, result);
+        result.add(current.val);
     }
 }
