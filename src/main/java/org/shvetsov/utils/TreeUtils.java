@@ -12,6 +12,7 @@ public class TreeUtils {
     }
 
     public static TreeNode constructTreeNode(Integer... treeValues) {
+        if (treeValues.length == 0 || treeValues[0] == null) return null;
         TreeNode root = new TreeNode(treeValues[0]);
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
@@ -48,5 +49,30 @@ public class TreeUtils {
 
     public static void prettyPrintTree(TreeNode node) {
         prettyPrintTree(node,  "", true);
+    }
+
+
+
+    public static void prettyPrintTree(TreeNode node, String prefix, boolean isLeft, StringBuilder acc) {
+        if (node == null) {
+            acc.append("Empty tree");
+            return;
+        }
+
+        if (node.right != null) {
+            prettyPrintTree(node.right, prefix + (isLeft ? "│   " : "    "), false, acc);
+        }
+
+        acc.append(prefix).append(isLeft ? "└── " : "┌── ").append(node.val).append("\n");
+
+        if (node.left != null) {
+            prettyPrintTree(node.left, prefix + (isLeft ? "    " : "│   "), true, acc);
+        }
+    }
+
+    public static String treeToString(TreeNode node) {
+        StringBuilder acc = new StringBuilder("\n");
+        prettyPrintTree(node, "", true, acc);
+        return acc.toString();
     }
 }

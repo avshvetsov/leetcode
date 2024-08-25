@@ -1,5 +1,7 @@
 package org.shvetsov.classes;
 
+import org.shvetsov.utils.TreeUtils;
+
 import java.util.Objects;
 
 public class TreeNode {
@@ -36,12 +38,16 @@ public class TreeNode {
         return result;
     }
 
-
     @Override
     public String toString() {
-        return "\n" + print(this, 0);
+        return TreeUtils.treeToString(this);
     }
 
+
+
+    public String toStringAlternative() {
+        return "\n" + print(this, 0);
+    }
 
     private static final String space = "      ";
 
