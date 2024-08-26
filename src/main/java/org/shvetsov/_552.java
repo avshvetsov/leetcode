@@ -9,7 +9,8 @@ import java.util.Arrays;
         number = 552,
         name = "Student Attendance Record II",
         level = Level.HARD,
-        tags = {"Dynamic Programming"}
+        tags = {"Dynamic Programming"},
+        todo = {"Recursion class not work correctly"}
 )
 public class _552 {
 
@@ -47,6 +48,7 @@ public class _552 {
     }
 
 
+    //Need to fix
     public static class Recursion {
 
         public int checkRecord(int n) {

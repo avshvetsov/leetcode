@@ -10,7 +10,8 @@ import java.util.List;
         number = 1937,
         name = "Maximum Number of Points with Cost",
         level = Level.MEDIUM,
-        tags = {"Array", "Dynamic Programming"}
+        tags = {"Array", "Dynamic Programming"},
+        todo = {"Brute force"}
 )
 public class _1937 {
     public long maxPoints(int[][] points) {

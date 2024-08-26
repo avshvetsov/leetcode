@@ -9,7 +9,8 @@ import java.util.*;
         number = 2597,
         name = "The Number of Beautiful Subsets",
         level = Level.MEDIUM,
-        tags = {"Array", "Dynamic Programming", "Backtracking", "Sorting"}
+        tags = {"Array", "Dynamic Programming", "Backtracking", "Sorting"},
+        todo = {"Not efficient"}
 )
 public class _2597 {
 

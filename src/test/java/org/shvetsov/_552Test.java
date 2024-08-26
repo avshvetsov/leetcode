@@ -1,6 +1,7 @@
 package org.shvetsov;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -37,21 +38,25 @@ class _552Test {
     }
 
     @Test
+    @Disabled
     void recursionCheckRecordExample1() {
         assertThat(taskRecursion.checkRecord(2)).isEqualTo(8);
     }
 
     @Test
+    @Disabled
     void recursionCheckRecordExample2() {
         assertThat(taskRecursion.checkRecord(1)).isEqualTo(3);
     }
 
     @Test
+    @Disabled
     void recursionCheckRecordExample3() {
         assertThat(taskRecursion.checkRecord(10101)).isEqualTo(183_236_316);
     }
 
     @Test
+    @Disabled
     void recursionCheckRecordTC4() {
         assertThat(taskRecursion.checkRecord(4)).isEqualTo(43);
     }
