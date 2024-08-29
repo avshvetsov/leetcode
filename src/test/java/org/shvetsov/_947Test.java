@@ -18,21 +18,23 @@ class _947Test {
     }
 
     @Test
-    @Disabled
     void removeStonesExample1() {
         assertThat(task.removeStones(new int[][]{{0, 0}, {0, 1}, {1, 0}, {1, 2}, {2, 1}, {2, 2}})).isEqualTo(5);
     }
 
     @Test
-    @Disabled
     void removeStonesExample2() {
         assertThat(task.removeStones(new int[][]{{0, 0}, {0, 2}, {1, 1}, {2, 0}, {2, 2}})).isEqualTo(3);
     }
 
     @Test
-    @Disabled
     void removeStonesExample3() {
         assertThat(task.removeStones(new int[][]{{0, 0}})).isEqualTo(0);
+    }
+
+    @Test
+    void removeStonesTC7() {
+        assertThat(task.removeStones(new int[][]{{0, 1}, {0, 2}, {4, 3}, {2, 4}, {0, 3}, {1, 1}})).isEqualTo(4);
     }
 
     @Test

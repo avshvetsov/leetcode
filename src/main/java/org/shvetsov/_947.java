@@ -15,10 +15,43 @@ import java.util.*;
 public class _947 {
 
     public int removeStones(int[][] stones) {
-        return 0;
+        int max = Integer.MIN_VALUE;
+        for (int[] stone : stones) {
+            max = Math.max(max, stone[0]);
+            max = Math.max(max, stone[1]);
+        }
+        int[] rows = new int[max + 1];
+        Arrays.fill(rows, -1);
+        int[] cols = new int[max + 1];
+        Arrays.fill(cols, -1);
+        for (int[] stone : stones) {
+            int rowGroup = rows[stone[0]];
+            int colGroup = cols[stone[1]];
+            if (rowGroup == -1 && colGroup == -1) {
+                rows[stone[0]] = stone[0];
+                cols[stone[1]] = stone[0];
+            } else if (rowGroup == -1) {
+                rows[stone[0]] = colGroup;
+            } else if (colGroup == -1) {
+                cols[stone[1]] = rowGroup;
+            } else {
+                for (int i = 0; i < rows.length; i++) {
+                    if (rows[i] == rowGroup) {
+                        rows[i] = colGroup;
+                    }
+                    if (cols[i] == rowGroup) {
+                        cols[i] = colGroup;
+                    }
+                }
+            }
+        }
+        int groups = (int) Arrays.stream(rows).filter(value -> value != -1).distinct().count();
+        return stones.length - groups;
     }
 
+
     public static class MapSolution {
+
         public int removeStones(int[][] stones) {
             Map<Integer, List<Stone>> graphRow = new HashMap<>();
             Map<Integer, List<Stone>> graphCol = new HashMap<>();
@@ -52,6 +85,8 @@ public class _947 {
             }
         }
 
-        private record Stone(int row, int col) {}
+        private record Stone(int row, int col) {
+        }
+
     }
 }
