@@ -57,6 +57,39 @@ public class _1971 {
         return result;
     }
 
+    public static class UnionFind2 {
+        public boolean validPath(int n, int[][] edges, int source, int destination) {
+            UF uf = new UF(n);
+            for (int[] edge : edges) {
+                uf.union(edge[0], edge[1]);
+            }
+            return uf.find(source) == uf.find(destination);
+        }
+
+        private class UF {
+            private int[] nodes;
+
+            public UF(int n) {
+                nodes = new int[n];
+                for (int i = 0; i < nodes.length; i++) {
+                    nodes[i] = i;
+                }
+            }
+
+            public void union(int p, int q) {
+                int rootP = find(p);
+                int rootQ = find(q);
+                nodes[rootP] = rootQ;
+            }
+
+            public int find(int p) {
+                while (nodes[p] != p) {
+                    p = nodes[p];
+                }
+                return p;
+            }
+        }
+    }
 
     public static class BFS {
         public boolean validPath(int n, int[][] edges, int source, int destination) {

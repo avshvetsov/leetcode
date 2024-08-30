@@ -11,6 +11,7 @@ class _1971Test {
     private static _1971.BFS taskBFS;
     private static _1971.DFS taskDFS;
     private static _1971.UnionFind taskUnionFind;
+    private static _1971.UnionFind2 taskUnionFind2;
 
     @BeforeEach
     public void setup() {
@@ -18,6 +19,7 @@ class _1971Test {
         taskBFS = new _1971.BFS();
         taskDFS = new _1971.DFS();
         taskUnionFind = new _1971.UnionFind();
+        taskUnionFind2 = new _1971.UnionFind2();
     }
 
     @Test
@@ -44,5 +46,12 @@ class _1971Test {
         assertThat(taskUnionFind.validPath(3, new int[][]{{0, 1}, {1, 2}, {2, 0}}, 0, 2)).isTrue();
         assertThat(taskUnionFind.validPath(6, new int[][]{{0, 1}, {0, 2}, {3, 5}, {5, 4}, {4, 3}}, 0, 5)).isFalse();
         assertThat(taskUnionFind.validPath(10, new int[][]{{2, 6}, {4, 7}, {1, 2}, {3, 5}, {7, 9}, {6, 4}, {9, 8}, {0, 1}, {3, 0}}, 3, 5)).isTrue();
+    }
+
+    @Test
+    void validPathUnionFind2() {
+        assertThat(taskUnionFind2.validPath(3, new int[][]{{0, 1}, {1, 2}, {2, 0}}, 0, 2)).isTrue();
+        assertThat(taskUnionFind2.validPath(6, new int[][]{{0, 1}, {0, 2}, {3, 5}, {5, 4}, {4, 3}}, 0, 5)).isFalse();
+        assertThat(taskUnionFind2.validPath(10, new int[][]{{2, 6}, {4, 7}, {1, 2}, {3, 5}, {7, 9}, {6, 4}, {9, 8}, {0, 1}, {3, 0}}, 3, 5)).isTrue();
     }
 }
