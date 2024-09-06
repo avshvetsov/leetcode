@@ -22,11 +22,11 @@ class _2028Test {
 
     @Test
     void missingRollsExample2() {
-        assertThat(task.missingRolls(new int[]{1,5,6}, 3, 4)).isEqualTo(new int[]{2,3,2,2});
+        assertThat(task.missingRolls(new int[]{1, 5, 6}, 3, 4)).containsExactlyInAnyOrder(2, 3, 2, 2);
     }
 
     @Test
     void missingRollsExample3() {
-        assertThat(task.missingRolls(new int[]{1,2,3,4}, 6, 4)).isEqualTo(new int[0]);
+        assertThat(task.missingRolls(new int[]{1, 2, 3, 4}, 6, 4)).isEqualTo(new int[0]);
     }
 }
