@@ -36,4 +36,18 @@ class _1367Test {
                 TreeUtils.constructTreeNode(1, 4, 4, null, 2, 2, null, 1, null, 6, 8, null, null, null, null, 1, 3)))
                 .isFalse();
     }
+
+    @Test
+    void isSubPathTC63() {
+        assertThat(task.isSubPath(LinkedListUtils.constructListNode(1,10),
+                TreeUtils.constructTreeNode(1,null,1,10,1,9)))
+                .isTrue();
+    }
+
+    @Test
+    void isSubPathTC65() {
+        assertThat(task.isSubPath(LinkedListUtils.constructListNode(2,2,1),
+                TreeUtils.constructTreeNode(2,null,2,null,2,null,1)))
+                .isTrue();
+    }
 }
