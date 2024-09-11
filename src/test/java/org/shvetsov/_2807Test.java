@@ -26,4 +26,10 @@ class _2807Test {
         assertThat(task.insertGreatestCommonDivisors(LinkedListUtils.constructListNode(7)))
                 .isEqualTo(LinkedListUtils.constructListNode(7));
     }
+
+    @Test
+    void insertGreatestCommonDivisorsTC421() {
+        assertThat(task.insertGreatestCommonDivisors(LinkedListUtils.constructListNode(12, 16)))
+                .isEqualTo(LinkedListUtils.constructListNode(12, 4, 16));
+    }
 }
