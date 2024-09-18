@@ -16,11 +16,11 @@ class _179Test {
 
     @Test
     void largestNumberExample1() {
-        assertThat(task.largestNumber(new int[]{10, 2})).isEqualTo(210);
+        assertThat(task.largestNumber(new int[]{10, 2})).isEqualTo("210");
     }
 
     @Test
     void largestNumberExample2() {
-        assertThat(task.largestNumber(new int[]{3, 30, 34, 5, 9})).isEqualTo(9534330);
+        assertThat(task.largestNumber(new int[]{3, 30, 34, 5, 9})).isEqualTo("9534330");
     }
 }
