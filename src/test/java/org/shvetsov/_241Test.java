@@ -16,11 +16,11 @@ class _241Test {
 
     @Test
     void diffWaysToComputeExample1() {
-        assertThat(task.diffWaysToCompute("2-1-1")).containsExactly(0, 2);
+        assertThat(task.diffWaysToCompute("2-1-1")).containsExactlyInAnyOrder(0, 2);
     }
 
     @Test
     void diffWaysToComputeExample2() {
-        assertThat(task.diffWaysToCompute("2*3-4*5")).containsExactly(-34, -14, -10, -10, 10);
+        assertThat(task.diffWaysToCompute("2*3-4*5")).containsExactlyInAnyOrder(-34, -14, -10, -10, 10);
     }
 }
