@@ -11,7 +11,26 @@ import org.shvetsov.core.Level;
 )
 public class _1497 {
     public boolean canArrange(int[] arr, int k) {
-
-        return false;
+        int[] freq = new int[k];
+        for (int i : arr) {
+            int rod = i % k;
+            if (rod < 0) {
+                freq[Math.abs(rod)]--;
+            } else freq[Math.abs(rod)]++;
+            // second option count freq
+//            int rod = ((i % k) + k) % k;
+//            freq[rod]++;
+        }
+        if (freq[0] % 2 != 0) return false;
+        int l = 1;
+        int r = freq.length - 1;
+        while (l < r) {
+            if (freq[l] != freq[r]) {
+                return false;
+            }
+            l++;
+            r--;
+        }
+        return true;
     }
 }
