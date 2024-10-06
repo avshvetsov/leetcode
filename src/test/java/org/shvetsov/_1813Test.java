@@ -26,4 +26,9 @@ class _1813Test {
     void areSentencesSimilarExample3() {
         assertThat(task.areSentencesSimilar("Eating right now", "Eating")).isTrue();
     }
+
+    @Test
+    void areSentencesSimilarTC85() {
+        assertThat(task.areSentencesSimilar("c h p Ny", "c BDQ r h p Ny")).isTrue();
+    }
 }
