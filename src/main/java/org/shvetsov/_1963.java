@@ -11,7 +11,18 @@ import org.shvetsov.core.Level;
 )
 public class _1963 {
     public int minSwaps(String s) {
-
-        return -1;
+        int result = 0;
+        int opened = 0;
+        for (char c : s.toCharArray()) {
+            if (c == '[') {
+                opened++;
+            } else {
+                if (opened == 0) {
+                    result++;
+                    opened++;
+                } else opened--;
+            }
+        }
+        return result;
     }
 }
