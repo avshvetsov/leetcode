@@ -11,7 +11,14 @@ import org.shvetsov.core.Level;
 )
 public class _921 {
     public int minAddToMakeValid(String s) {
-
-        return -1;
+        int result = 0, opened = 0;
+        for (char c : s.toCharArray()) {
+            if(c == '(') opened++;
+            else if (c == ')') {
+                if(opened > 0) opened--;
+                else result++;
+            }
+        }
+        return result + opened;
     }
 }
