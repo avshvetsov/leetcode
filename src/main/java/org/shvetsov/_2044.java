@@ -10,8 +10,23 @@ import org.shvetsov.core.Level;
         tags = {"Array", "Backtracking", "Bit Manipulation", "Enumeration"}
 )
 public class _2044 {
-    public int countMaxOrSubsets(int[] nums) {
+    int count = 0;
 
-        return -1;
+    public int countMaxOrSubsets(int[] nums) {
+        int max = 0;
+        for (int num : nums) {
+            max |= num;
+        }
+        recursionCount(nums, 0, 0, max);
+        return count;
+    }
+
+    private void recursionCount(int[] nums, int i, int currOR, int max) {
+        if (currOR == max) {
+            count++;
+        }
+        for (int j = i; j < nums.length; j++) {
+            recursionCount(nums, j + 1, currOR | nums[j], max);
+        }
     }
 }
