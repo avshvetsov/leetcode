@@ -22,6 +22,6 @@ class _2583Test {
 
     @Test
     void kthLargestLevelSumExample2() {
-        assertThat(task.kthLargestLevelSum(TreeUtils.constructTreeNode(1, 2, null, 3), 1)).isEqualTo(2);
+        assertThat(task.kthLargestLevelSum(TreeUtils.constructTreeNode(1, 2, null, 3), 1)).isEqualTo(3);
     }
 }
