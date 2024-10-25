@@ -3,7 +3,7 @@ package org.shvetsov;
 import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
-import java.util.List;
+import java.util.*;
 
 @LeetCode(
         number = 1233,
@@ -13,7 +13,35 @@ import java.util.List;
 )
 public class _1233 {
     public List<String> removeSubfolders(String[] folder) {
+        TrieNode root = new TrieNode();
+        Arrays.sort(folder, Comparator.comparingInt(String::length));
+        List<String> result = new ArrayList<>();
+        for (String s : folder) {
+            if (root.insert(s.split("/"))) {
+                result.add(s);
+            }
+        }
+        return result;
+    }
 
-        return null;
+    public class TrieNode {
+
+        Map<String, TrieNode> children = new HashMap<>();
+        boolean isEnd = false;
+
+        public TrieNode() {
+        }
+
+        public boolean insert(String[] strings) {
+            Map<String, TrieNode> childs = children;
+            TrieNode current = this;
+            for (String s : strings) {
+                current = childs.computeIfAbsent(s, k -> new TrieNode());
+                if (current.isEnd) return false;
+                childs = current.children;
+            }
+            current.isEnd = true;
+            return true;
+        }
     }
 }
