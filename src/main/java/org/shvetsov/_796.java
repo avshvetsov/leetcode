@@ -11,7 +11,6 @@ import org.shvetsov.core.Level;
 )
 public class _796 {
     public boolean rotateString(String s, String goal) {
-
-        return false;
+        return s.length() == goal.length() &&(s + s).contains(goal);
     }
 }
