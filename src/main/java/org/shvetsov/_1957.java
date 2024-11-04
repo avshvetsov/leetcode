@@ -11,7 +11,20 @@ import org.shvetsov.core.Level;
 )
 public class _1957 {
     public String makeFancyString(String s) {
-
-        return null;
+        StringBuilder sb = new StringBuilder();
+        int cnt = 0;
+        char lastChar = ' ';
+        for (char c : s.toCharArray()) {
+            if (c == lastChar) {
+                cnt++;
+            } else {
+                cnt = 1;
+                lastChar = c;
+            }
+            if (cnt < 3) {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
     }
 }
