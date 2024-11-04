@@ -11,7 +11,11 @@ import org.shvetsov.core.Level;
 )
 public class _2490 {
     public boolean isCircularSentence(String sentence) {
-
-        return false;
+        char prev = sentence.charAt(sentence.length() - 1);
+        for (String s : sentence.split(" ")) {
+            if (prev != s.charAt(0)) return false;
+            prev = s.charAt(s.length() - 1);
+        }
+        return true;
     }
 }
