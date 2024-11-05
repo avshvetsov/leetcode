@@ -11,7 +11,22 @@ import org.shvetsov.core.Level;
 )
 public class _2914 {
     public int minChanges(String s) {
-
-        return -1;
+        int result = 0;
+        int prevLength = 0;
+        char prevChar = s.charAt(0);
+        for (char c : s.toCharArray()) {
+            if (c == prevChar || prevLength == 0) {
+                prevLength++;
+            } else {
+                if (prevLength % 2 == 0) {
+                    prevLength = 1;
+                } else {
+                    result++;
+                    prevLength = 0;
+                }
+            }
+            prevChar = c;
+        }
+        return result;
     }
 }
