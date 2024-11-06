@@ -11,6 +11,12 @@ public @interface LeetCode {
 
     String[] todo() default {};
 
+    int resultTime() default -1;
 
+    double beatsTime() default -1;
+
+    double resultSpace() default -1;
+
+    double beatsSpace() default -1;
 
 }
