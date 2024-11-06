@@ -11,7 +11,24 @@ import org.shvetsov.core.Level;
 )
 public class _3011 {
     public boolean canSortArray(int[] nums) {
-
-        return false;
+        int prevBitCount = Integer.bitCount(nums[0]);
+        int prevMax = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for (int num : nums) {
+            if (Integer.bitCount(num) == prevBitCount) {
+                min = Math.min(min, num);
+                max = Math.max(max, num);
+            } else {
+                if (min < prevMax) {
+                    return false;
+                }
+                prevMax = max;
+                max = num;
+                min = num;
+                prevBitCount = Integer.bitCount(num);
+            }
+        }
+        return min > prevMax;
     }
 }
