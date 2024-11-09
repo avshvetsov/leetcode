@@ -12,7 +12,7 @@ import org.shvetsov.core.Level;
 public class _3133 {
     public long minEnd(int n, int x) {
         long result = x;
-        while (n > 0) {
+        while (n > 1) {
             result = (result + 1) | x;
             n--;
         }
