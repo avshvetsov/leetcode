@@ -23,4 +23,9 @@ class _3133Test {
     void minEndExample2() {
         assertThat(task.minEnd(2, 7)).isEqualTo(15);
     }
+
+    @Test
+    void minEndTC76() {
+        assertThat(task.minEnd(4, 1)).isEqualTo(7);
+    }
 }
