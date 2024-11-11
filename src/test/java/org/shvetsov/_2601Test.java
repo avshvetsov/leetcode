@@ -28,4 +28,9 @@ class _2601Test {
     void primeSubOperationExample3() {
         assertThat(task.primeSubOperation(new int[]{5, 8, 3})).isFalse();
     }
+
+    @Test
+    void primeSubOperationTC642() {
+        assertThat(task.primeSubOperation(new int[]{2, 2})).isFalse();
+    }
 }
