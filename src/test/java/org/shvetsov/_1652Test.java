@@ -26,6 +26,6 @@ class _1652Test {
 
     @Test
     void decryptExample3() {
-        assertThat(task.decrypt(new int[]{2, 4, 9, 3}, -1)).containsExactly(12, 5, 6, 13);
+        assertThat(task.decrypt(new int[]{2, 4, 9, 3}, -2)).containsExactly(12, 5, 6, 13);
     }
 }
