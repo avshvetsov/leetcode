@@ -23,4 +23,15 @@ class _134Test {
     void canCompleteCircuitExample2() {
         assertThat(task.canCompleteCircuit(new int[]{2, 3, 4}, new int[]{3, 4, 3})).isEqualTo(-1);
     }
+
+    @Test
+    void canCompleteCircuitTC34() {
+        assertThat(task.canCompleteCircuit(new int[]{2}, new int[]{2})).isEqualTo(0);
+    }
+
+    @Test
+    void canCompleteCircuitMy1() {
+        assertThat(task.canCompleteCircuit(new int[]{1, 5, 3, 5, 5}, new int[]{3, 1, 5, 4, 6})).isEqualTo(1);
+    }
+
 }
