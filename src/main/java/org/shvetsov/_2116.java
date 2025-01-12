@@ -11,7 +11,27 @@ import org.shvetsov.core.Level;
 )
 public class _2116 {
     public boolean canBeValid(String s, String locked) {
+        if (s.length() % 2 != 0) return false;
 
-        return false;
+        int openMax = 0, closeMin = 0;
+        int opened = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (locked.charAt(i) == '1') {
+                if (s.charAt(i) == '(') {
+                    openMax++;
+                    opened++;
+                } else if (s.charAt(i) == ')') {
+                    closeMin++;
+                    opened = Math.max(0, opened - 1);
+                }
+                if (openMax < closeMin)
+                    return false;
+            } else {
+                openMax++;
+                opened = Math.max(0, opened - 1);
+            }
+        }
+        return opened == 0;
     }
+
 }
