@@ -10,7 +10,20 @@ import org.shvetsov.core.Level;
 )
 public class _1752 {
     public boolean check(int[] nums) {
-
+        int length = nums.length;
+        int m = 0;
+        int prev = Integer.MIN_VALUE;
+        for (int i = 0; i < length * 2; i++) {
+            if (nums[i % length] >= prev) {
+                m++;
+            } else {
+                m = 1;
+            }
+            if (m == length) {
+                return true;
+            }
+            prev = nums[i % length];
+        }
         return false;
     }
 }
