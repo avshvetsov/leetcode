@@ -29,4 +29,9 @@ class _3105Test {
         assertThat(task.longestMonotonicSubarray(new int[]{3, 2, 1})).isEqualTo(3);
     }
 
+    @Test
+    void longestMonotonicSubarrayTC683() {
+        assertThat(task.longestMonotonicSubarray(new int[]{1, 9, 7, 1})).isEqualTo(3);
+    }
+
 }
