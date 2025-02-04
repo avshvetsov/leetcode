@@ -11,7 +11,19 @@ import org.shvetsov.core.Level;
 )
 public class _1800 {
     public int maxAscendingSum(int[] nums) {
-
-        return -1;
+        int result = nums[0];
+        int prev = nums[0];
+        int sum = prev;
+        for (int i = 1; i < nums.length; i++) {
+            if (prev < nums[i]) {
+                sum += nums[i];
+            } else {
+                result = Math.max(result, sum);
+                sum = nums[i];
+            }
+            result = Math.max(result, sum);
+            prev = nums[i];
+        }
+        return result;
     }
 }
