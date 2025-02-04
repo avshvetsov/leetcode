@@ -26,7 +26,7 @@ class _1800Test {
 
     @Test
     void maxAscendingSumExample3() {
-        assertThat(task.maxAscendingSum(new int[]{12, 17, 15, 13, 10, 11, 12})).isEqualTo(65);
+        assertThat(task.maxAscendingSum(new int[]{12, 17, 15, 13, 10, 11, 12})).isEqualTo(33);
     }
 
 }
