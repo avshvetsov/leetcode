@@ -26,5 +26,17 @@ class _1790Test {
     void areAlmostEqualExample3() {
         assertThat(task.areAlmostEqual("kelb", "kelb")).isTrue();
     }
+    @Test
+    void areAlmostEqualCountingExample1() {
+        assertThat(task.areAlmostEqualCounting("bank", "kanb")).isTrue();
+    }
+    @Test
+    void areAlmostEqualCountingExample2() {
+        assertThat(task.areAlmostEqualCounting("attack", "defend")).isFalse();
+    }
+    @Test
+    void areAlmostEqualCountingExample3() {
+        assertThat(task.areAlmostEqualCounting("kelb", "kelb")).isTrue();
+    }
 
 }
