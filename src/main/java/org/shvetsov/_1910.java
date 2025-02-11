@@ -11,7 +11,9 @@ import org.shvetsov.core.Level;
 )
 public class _1910 {
     public String removeOccurrences(String s, String part) {
-
-        return null;
+        while (s.contains(part)) {
+            s = s.replaceFirst(part, "");
+        }
+        return s;
     }
 }
