@@ -24,7 +24,7 @@ class _1352Test {
         assertThat(task.getProduct(2)).isEqualTo(20);
         assertThat(task.getProduct(3)).isEqualTo(40);
         assertThat(task.getProduct(4)).isEqualTo(0);
-        task.add(4);
+        task.add(8);
         assertThat(task.getProduct(2)).isEqualTo(32);
     }
 
