@@ -11,7 +11,26 @@ import org.shvetsov.core.Level;
 )
 public class _1079 {
     public int numTilePossibilities(String tiles) {
+        int[] countingMap = new int[26];
+        for (char c : tiles.toCharArray()) {
+            countingMap[c - 'A']++;
+        }
+        return countVariants(countingMap, tiles.length());
+    }
 
-        return -1;
+    private int countVariants(int[] countingMap, int left) {
+        if (left == 0) {
+            return 0;
+        }
+        int result = 0;
+        for (int i = 0; i < countingMap.length; i++) {
+            if (countingMap[i] > 0) {
+                countingMap[i]--;
+                result += countVariants(countingMap, left - 1);
+                countingMap[i]++;
+                result++;
+            }
+        }
+        return result;
     }
 }
