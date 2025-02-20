@@ -16,15 +16,15 @@ class _1980Test {
 
     @Test
     void findDifferentBinaryStringExample1() {
-        assertThat(task.findDifferentBinaryString(new String[]{"01","10"})).isEqualTo("11");
+        assertThat(task.findDifferentBinaryString(new String[]{"01","10"})).isIn("11", "00");
     }
     @Test
     void findDifferentBinaryStringExample2() {
-        assertThat(task.findDifferentBinaryString(new String[]{"00","01"})).isEqualTo("11");
+        assertThat(task.findDifferentBinaryString(new String[]{"00","01"})).isIn("11", "10");
     }
     @Test
     void findDifferentBinaryStringExample3() {
-        assertThat(task.findDifferentBinaryString(new String[]{"111","011","001"})).isEqualTo("101");
+        assertThat(task.findDifferentBinaryString(new String[]{"111","011","001"})).isIn("101", "000", "010", "100", "110");
     }
 
 }
