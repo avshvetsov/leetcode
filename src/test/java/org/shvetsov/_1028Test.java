@@ -30,4 +30,9 @@ class _1028Test {
         assertThat(task.recoverFromPreorder("1-401--349---90--88")).isEqualTo(TreeUtils.constructTreeNode(1, 401, null, 349, 88, 90));
     }
 
+    @Test
+    void recoverFromPreorderTC4() {
+        assertThat(task.recoverFromPreorder("3")).isEqualTo(TreeUtils.constructTreeNode(3));
+    }
+
 }
