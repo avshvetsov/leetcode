@@ -29,4 +29,9 @@ class _1524Test {
         assertThat(task.numOfSubarrays(new int[]{1, 2, 3, 4, 5, 6, 7})).isEqualTo(16);
     }
 
+    @Test
+    void numOfSubarraysTC43() {
+        assertThat(task.numOfSubarrays(new int[]{64, 69, 7, 78, 31, 83, 47, 84, 47, 6, 67})).isEqualTo(35);
+    }
+
 }
