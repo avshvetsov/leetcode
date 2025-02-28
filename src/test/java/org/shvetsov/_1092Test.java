@@ -24,4 +24,9 @@ class _1092Test {
         assertThat(task.shortestCommonSupersequence("aaaaaaaa", "aaaaaaaa")).isEqualTo("aaaaaaaa");
     }
 
+    @Test
+    void shortestCommonSupersequenceTC12() {
+        assertThat(task.shortestCommonSupersequence("bbbaaaba", "bbababbb")).isEqualTo("bbbaaababbb");
+    }
+
 }
