@@ -23,4 +23,9 @@ class _3403Test {
     void answerStringExample2() {
         assertThat(task.answerString("gggg", 4)).isEqualTo("g");
     }
+
+    @Test
+    void answerStringTCMy1() {
+        assertThat(task.answerString("cacbf", 4)).isEqualTo("f");
+    }
 }
