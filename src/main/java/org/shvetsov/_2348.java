@@ -11,7 +11,14 @@ import org.shvetsov.core.Level;
 )
 public class _2348 {
     public long zeroFilledSubarray(int[] nums) {
-
-        return -1;
+        long result = 0;
+        int zeros = 0;
+        for (int num : nums) {
+            if (num == 0) {
+                zeros++;
+                result += zeros;
+            } else zeros = 0;
+        }
+        return result;
     }
 }
