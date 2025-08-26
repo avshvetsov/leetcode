@@ -11,7 +11,16 @@ import org.shvetsov.core.Level;
 )
 public class _3000 {
     public int areaOfMaxDiagonal(int[][] dimensions) {
-
-        return 0;
+        int maxD = 0, maxA = 0;
+        for (int[] dimension : dimensions) {
+            int d = dimension[0] * dimension[0] + dimension[1] * dimension[1];
+            if (d > maxD) {
+                maxD = d;
+                maxA = dimension[0] * dimension[1];
+            } else if (d == maxD) {
+                maxA = Math.max(maxA, dimension[0] * dimension[1]);
+            }
+        }
+        return maxA;
     }
 }
