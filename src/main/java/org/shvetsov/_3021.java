@@ -11,7 +11,8 @@ import org.shvetsov.core.Level;
 )
 public class _3021 {
     public long flowerGame(int n, int m) {
-
-        return -1;
+        long evenn = n / 2, evenm = m / 2;
+        long oddn = n - evenn, oddm = m - evenm;
+        return oddn * evenm + oddm * evenn;
     }
 }
