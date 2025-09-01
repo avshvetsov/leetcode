@@ -22,6 +22,6 @@ class _1792Test {
 
     @Test
     void maxAverageRatioExample2() {
-        assertThat(task.maxAverageRatio(new int[][]{{2, 4}, {3, 9}, {4, 5}, {2, 10}}, 4)).isCloseTo(0.78333, within(0.00001));
+        assertThat(task.maxAverageRatio(new int[][]{{2, 4}, {3, 9}, {4, 5}, {2, 10}}, 4)).isCloseTo(0.53485, within(0.00001));
     }
 }
