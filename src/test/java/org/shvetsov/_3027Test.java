@@ -28,4 +28,9 @@ class _3027Test {
     void numberOfPairsExample3() {
         assertThat(task.numberOfPairs(new int[][]{{3, 1}, {1, 3}, {1, 1}})).isEqualTo(2);
     }
+
+    @Test
+    void numberOfPairsTC55() {
+        assertThat(task.numberOfPairs(new int[][]{{0, 3}, {2, 4}, {0, 6}})).isEqualTo(2);
+    }
 }
