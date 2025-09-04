@@ -11,7 +11,6 @@ import org.shvetsov.core.Level;
 )
 public class _3516 {
     public int findClosest(int x, int y, int z) {
-
-        return -1;
+        return Math.abs(z - x) < Math.abs(z - y) ? 1 : Math.abs(z - x) > Math.abs(z - y) ? 2 : 0;
     }
 }
