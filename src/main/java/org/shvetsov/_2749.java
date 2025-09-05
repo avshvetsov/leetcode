@@ -11,7 +11,18 @@ import org.shvetsov.core.Level;
 )
 public class _2749 {
     public int makeTheIntegerZero(int num1, int num2) {
-
+        long num = num1;
+        for (int i = 0; i <= 32; i++) {
+            int bitCount = Long.bitCount(num);
+//            String binaryString = Long.toBinaryString(num);
+            if (bitCount <= i && num >= i) {
+                return i;
+            }
+            if (num < 0 && num2 >= 0) {
+                return -1;
+            }
+            num -= num2;
+        }
         return -1;
     }
 }

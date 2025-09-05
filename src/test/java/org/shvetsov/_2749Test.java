@@ -23,4 +23,19 @@ class _2749Test {
     void makeTheIntegerZeroExample2() {
         assertThat(task.makeTheIntegerZero(5, 7)).isEqualTo(-1);
     }
+
+    @Test
+    void makeTheIntegerZeroTC532() {
+        assertThat(task.makeTheIntegerZero(110, 55)).isEqualTo(-1);
+    }
+
+    @Test
+    void makeTheIntegerZeroTC511() {
+        assertThat(task.makeTheIntegerZero(112577768, -501662198)).isEqualTo(16);
+    }
+
+    @Test
+    void makeTheIntegerZeroTC540() {
+        assertThat(task.makeTheIntegerZero(135, 26)).isEqualTo(5);
+    }
 }
