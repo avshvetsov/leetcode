@@ -11,7 +11,14 @@ import org.shvetsov.core.Level;
 )
 public class _1304 {
     public int[] sumZero(int n) {
-
-        return null;
+        int[] result = new int[n];
+        if (n % 2 != 0) {
+            result[n - 1] = 0;
+        }
+        for (int i = 1; i < n; i += 2) {
+            result[i - 1] = i / 2 + 1;
+            result[i] = -(i / 2 + 1);
+        }
+        return result;
     }
 }
