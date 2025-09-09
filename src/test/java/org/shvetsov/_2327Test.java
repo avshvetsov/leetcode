@@ -23,4 +23,9 @@ class _2327Test {
     void peopleAwareOfSecretExample2() {
         assertThat(task.peopleAwareOfSecret(4, 1, 3)).isEqualTo(6);
     }
+
+    @Test
+    void peopleAwareOfSecretTC54() {
+        assertThat(task.peopleAwareOfSecret(684, 18, 496)).isEqualTo(653668527);
+    }
 }
