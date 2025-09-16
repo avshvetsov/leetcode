@@ -23,4 +23,9 @@ class _2197Test {
     void replaceNonCoprimesExample2() {
         assertThat(task.replaceNonCoprimes(new int[]{2, 2, 1, 1, 3, 3, 3})).containsExactly(2, 1, 1, 3);
     }
+
+    @Test
+    void replaceNonCoprimesTC3() {
+        assertThat(task.replaceNonCoprimes(new int[]{517, 11, 121, 517, 3, 51, 3, 1887, 5})).containsExactly(5687, 1887, 5);
+    }
 }
