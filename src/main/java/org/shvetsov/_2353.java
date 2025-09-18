@@ -3,9 +3,7 @@ package org.shvetsov;
 import org.shvetsov.core.LeetCode;
 import org.shvetsov.core.Level;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @LeetCode(
         number = 2353,
@@ -17,8 +15,8 @@ public class _2353 {
 
     static class FoodRatings {
 
-        private Map<String, Food> foodMap = new HashMap<>();
-        private Map<String, Food> cuisineHighestRatedFood = new HashMap<>();
+        private final Map<String, Food> foodMap = new HashMap<>();
+        private final Map<String, TreeSet<Food>> cuisineFoods = new HashMap<>();
 
         public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
             for (int i = 0; i < foods.length; i++) {
@@ -26,7 +24,7 @@ public class _2353 {
                 int rating = ratings[i];
                 Food food = new Food(foods[i], cuisine, rating);
                 this.foodMap.put(foods[i], food);
-                this.cuisineHighestRatedFood.compute(cuisine, (k, v) -> v == null || food.compareTo(v) > 0 ? food : v);
+                this.cuisineFoods.computeIfAbsent(cuisine, k -> new TreeSet<>()).add(food);
             }
         }
 
@@ -38,7 +36,7 @@ public class _2353 {
             @Override
             public int compareTo(Food f) {
                 if (f.rating != this.rating) {
-                    return this.rating - f.rating;
+                    return Integer.compare(this.rating, f.rating);
                 } else {
                     return f.food.compareTo(this.food);
                 }
@@ -46,24 +44,20 @@ public class _2353 {
         }
 
         public void changeRating(String food, int newRating) {
-            Food foodR = this.foodMap.get(food);
-            if (foodR != null) {
-                Food newFood = foodR.withRating(newRating);
+            Food oldFood = this.foodMap.get(food);
+            if (oldFood != null) {
+                Food newFood = oldFood.withRating(newRating);
                 this.foodMap.put(food, newFood);
-                if (!this.cuisineHighestRatedFood.get(newFood.cuisine).food.equals(food)) {
-                    this.cuisineHighestRatedFood.compute(foodR.cuisine, (k, v) -> v == null || newFood.compareTo(v) > 0 ? newFood : v);
-                } else {
-                    List<Food> foodList = foodMap.values().stream()
-                            .filter(f -> f.cuisine.equals(newFood.cuisine))
-                            .sorted((o1, o2) -> o1.rating != o2.rating ? Integer.compare(o1.rating, o2.rating) : o2.food.compareTo(o1.food))
-                            .toList();
-                    this.cuisineHighestRatedFood.put(newFood.cuisine, foodList.getLast());
-                }
+                //Усі порівняння в TreeSet відбуваються через Comparator і не використовують equals.
+                //Тому Comparator та equals мають бути узгодженими
+                //А це означає, що не можна просто викликати .add(newFood), у надії, що він зареплейсить oldFood. Тому що умова еквівалентності береться за Comparator.
+                this.cuisineFoods.get(newFood.cuisine).remove(oldFood);
+                this.cuisineFoods.get(newFood.cuisine).add(newFood);
             }
         }
 
         public String highestRated(String cuisine) {
-            return this.cuisineHighestRatedFood.get(cuisine).food;
+            return this.cuisineFoods.get(cuisine).getLast().food;
         }
     }
 
